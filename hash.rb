@@ -17,7 +17,7 @@ h =  {"box1" => 1,"box2" => 2,"box3" => 3,"box4" => 4,"box5" => 5,"box6" => 6,
 
   heaviest = h.key(h.values.max)
   puts "heaviest box number"
-  puts {heaviest}
+  puts heaviest
   lightest = h.key(h.values.min)
   puts "lightest box number"
   puts lightest
