@@ -3,14 +3,43 @@
 # then display all content from file
 
 
-existing_file = File.open("hello.txt","r") do |existing_file|
-  text = existing_file.read
-  puts text
+File.open("hello.txt","r") do |d|
+text = d.read
+puts text
 end
-update = File.open("hello.txt", 'a+')
+
+def update
+a = File.open("hello.txt", 'a+')
 puts "Update the existing file"
-content = gets.to_s
-hi = update.puts(content)
-puts hi
+content = gets.chomp
+a.puts(content)
+a.close
+end
+update
+
+
+File.open("hello.txt","r") do |d|
+text = d.read
+puts text
+end
+
+# File.open("hello.txt", "r") do |f|     
+# 	f1=f.read  
+# 	puts f1
+# end
+
+# def f
+# 	file=File.open("hello.txt", "a+") 
+# 	puts "enter the content"
+# 	content=gets.to_s
+# 	file.puts(content)
+# 	file.close
+# end
+# f
+
+# File.open("hello.txt", "r") do |f|     
+# 	f1=f.read  
+# 	puts f1
+# end
 
 

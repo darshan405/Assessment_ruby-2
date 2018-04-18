@@ -20,10 +20,13 @@ end
 
 class Privacysetting < Whatsappdp
   def hello
-    pri
+    pub
+    pro
+    Whatsappdp.new.pri rescue puts "can't access since it is a private"
+    # pri
   end
 end
 
 privacy = Privacysetting.new
-# privacy.hello # can access private
-privacy.pri rescue puts "can't access since it is a private"
+privacy.hello # can access private
+# privacy.pri rescue puts "can't access since it is a private"

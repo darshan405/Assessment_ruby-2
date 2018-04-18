@@ -15,10 +15,5 @@ h =  {"box1" => 1,"box2" => 2,"box3" => 3,"box4" => 4,"box5" => 5,"box6" => 6,
   "box9" => 9,
   "box10" => 10}
 
-  heaviest = h.key(h.values.max)
-  puts "heaviest box number"
-  puts heaviest
-  lightest = h.key(h.values.min)
-  puts "lightest box number"
-  puts lightest
-
+puts h.select {|x,i| i == h.values.max }
+puts h.select {|x,i| i == h.values.min }

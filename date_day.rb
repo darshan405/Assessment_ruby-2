@@ -3,11 +3,8 @@
 # output: "Monday"
 
 
-
-# puts weekday("October 28 of 2010")
-
-# date = Time.now.to_date
-# puts date.strftime("%A")
-
-hi = Date.today.strftime("%A")
-puts hi
+require "date"
+puts "enter date"
+@str=gets.chomp
+str1=Date.parse("#{@str}")
+p str1.strftime('%A')

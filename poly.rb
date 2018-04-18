@@ -36,3 +36,4 @@ lord.character(avatar2)
 avatar3 = Narashima.new
 lord.character(avatar3)
 
+

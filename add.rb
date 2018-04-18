@@ -2,7 +2,6 @@ module Addition
     def add
         puts "Please enter value a"
         x=Integer(gets)
-        if a == x
         puts "Please enter value b"
         y=Integer(gets)
         z=x+y

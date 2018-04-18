@@ -14,23 +14,102 @@
 #         Please enter value b 
 #         12
 #         Result is 24
-require_relative 'mul'
-require_relative 'add'
-require_relative 'sub'
-require_relative 'div'
+# require_relative 'mul'
+# require_relative 'add'
+# require_relative 'sub'
+# require_relative 'div'
 puts "please select mathamatics operation"
 puts "1.addition"
 puts "2.subtration"
 puts "3.multiplication"
 puts "4.division"
 puts "please select option"
-class Arthmeticoperations
-  include Addition
-  include Subtration
-  include Multiplicationn
-  include Division
+module Arthmeticoperations
+    def add
+      begin
+        puts "Please enter value a"
+        x=Integer(gets)
+        puts "Please enter value b"
+        y=Integer(gets)
+        z=x+y
+        puts "Result:#{z}"
+        rescue
+          puts "You have entered the string, Please enter the interger value"
+          puts "Please enter the valid number a:"
+          a=Integer(gets)
+          puts "Please enter the valid number b:"
+          b=Integer(gets)
+          c=a+b
+          puts "Result:#{c}"
+        ensure
+          puts "Thank you"
+    end
+  end
+    def sub
+      begin
+        puts "Please enter value a"
+        x=Integer(gets)
+        puts "Please enter value b"
+        y=Integer(gets)
+        z=x-y
+        puts "Result:#{z}"
+        rescue
+          puts "You have entered the string, Please enter the interger value"
+          puts "Please enter the valid number a:"
+          a=Integer(gets)
+          puts "Please enter the valid number b:"
+          b=Integer(gets)
+          c=a-b
+          puts "Result:#{c}"
+        ensure
+          puts "Thank you"
+    end
+  end
+  def mul
+      begin
+        puts "Please enter value a"
+        x=Integer(gets)
+        puts "Please enter value b"
+        y=Integer(gets)
+        z=x*y
+        puts "Result:#{z}"
+        rescue
+          puts "You have entered the string, Please enter the interger value"
+          puts "Please enter the valid number a:"
+          a=Integer(gets)
+          puts "Please enter the valid number b:"
+          b=Integer(gets)
+          c=a*b
+          puts "Result:#{c}"
+        ensure
+          puts "Thank you"
+    end
+  end
+   def div
+      begin
+        puts "Please enter value a"
+        x=Integer(gets)
+        puts "Please enter value b"
+        y=Integer(gets)
+        z=x/y
+        puts "Result:#{z}"
+        rescue
+          puts "You have entered the string, Please enter the interger value"
+          puts "Please enter the valid number a:"
+          a=Integer(gets)
+          puts "Please enter the valid number b:"
+          b=Integer(gets)
+          c=a/b
+          puts "Result:#{c}"
+        ensure
+          puts "Thank you"
+    end
+  end
 end
-h=Arthmeticoperations.new
+class Mathamaticsoperation
+    include Arthmeticoperations
+end
+h=Mathamaticsoperation.new
 @input=Integer(gets)
 if @input == 1
   h.add
